@@ -17,6 +17,7 @@ def main():
     args = parser.parse_args()
 
     if args.rescale == 'rescale':
+        
        subdirs(args.image_path)
 
 
@@ -61,14 +62,13 @@ def subdirs(root):
     for path, subdirs, files in os.walk(root):
         for name in subdirs:
             subdir = os.path.join(saved, name)
-            for name in files:
-                pass
-                # try:
-                #     os.makedirs(subdir)
-                # except FileExistsError:
-                #     pass
+            for name in files: 
+                try:
+                     os.makedirs(subdir)
+                except FileExistsError:
+                    pass
     
-    # listdir(filess)
+    listdir(filess)
     
 main()   
 

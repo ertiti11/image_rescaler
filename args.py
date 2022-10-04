@@ -10,10 +10,3 @@ parser.add_argument('-o', '--operacion',
                     help='Operación a realizar con a y b')
 
 args = parser.parse_args()
-
-if args.operacion == 'suma':
-    print(args.numero_a + args.numero_b)
-elif args.operacion == 'resta':
-    print(args.numero_a - args.numero_b)
-elif args.operacion == 'multiplicacion':
-    print(args.numero_a * args.numero_b)
